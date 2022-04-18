@@ -14,3 +14,9 @@ Kullanılması gereken teknikler:
 Socket
 Thread
 
+# Projeden ekran alıntıları
+
+![github](Chat%20Room%20Application/images/Server.PNG)
+![github](Chat%20Room%20Application/images/Client1.PNG)
+![github](Chat%20Room%20Application/images/Client2.PNG)
+![github](Chat%20Room%20Application/images/Client3.PNG)

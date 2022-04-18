@@ -1,6 +1,7 @@
 package server;
 
 import common.ClientManager;
+import common.Config;
 
 import java.io.IOException;
 import java.net.ServerSocket;
@@ -16,7 +17,7 @@ public class Server {
 
     public void startServer() {
         try {
-            while(!serverSocket.isClosed()){
+            while (!serverSocket.isClosed()) {
                 Socket socket = serverSocket.accept();
                 System.out.println("A new client has connected to the server!");
                 ClientManager manageClient = new ClientManager(socket);
@@ -29,9 +30,9 @@ public class Server {
 
     }
 
-    public void closeServer(){
+    public void closeServer() {
         try {
-            if(serverSocket!=null){
+            if (serverSocket != null) {
                 serverSocket.close();
             }
         } catch (IOException e) {
@@ -41,7 +42,7 @@ public class Server {
 
     public static void main(String[] args) throws IOException {
 
-        ServerSocket serverSocket = new ServerSocket(1111);
+        ServerSocket serverSocket = new ServerSocket(Config.portNo);
         Server server = new Server(serverSocket);
         server.startServer();
 
